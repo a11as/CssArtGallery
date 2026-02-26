@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Kirby</title>
+    <meta charset="UTF-8" />
+  </head>
+  <style>
+    body {
+      background: #87cefa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .kirby {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background: #ffb6d9;
+      border: 5px solid #800000;
+      border-radius: 50%;
+    }
+    .eye {
+      position: absolute;
+      width: 35px;
+      height: 90px;
+      top: 15px;
+      background: linear-gradient(to bottom, #000 60%, #1e90ff 90%);
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+    .eye::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 45px;
+      background: white;
+      border-radius: 50%;
+      top: 5px;
+      left: 8px;
+    }
+    .eye.left {
+      left: 95px;
+    }
+    .eye.right {
+      right: 95px;
+    }
+    .cheek {
+      position: absolute;
+      width: 55px;
+      height: 30px;
+      top: 95px;
+      background: #ff69ba;
+      border-radius: 50%;
+    }
+    .cheek.left {
+      left: 35px;
+    }
+    .cheek.right {
+      right: 35px;
+    }
+    .mouth {
+      margin: auto;
+      top: 110px;
+      position: relative;
+      width: 150px;
+      height: 170px;
+      background: #801616;
+      border-radius: 50%/55% 55% 45% 45%;
+    }
+    .mouth::before {
+      content: "";
+      position: absolute;
+      background: #ff69b4;
+      border-radius: 50%/55% 55% 45% 45%;
+      top: 23px;
+      left: 5px;
+      width: 140px;
+      height: 145px;
+    }
+    .hand {
+      position: absolute;
+      width: 150px;
+      height: 120px;
+      top: 10px;
+      background: #ffb6d9;
+      border-radius: 50%;
+      border: 5px solid #800000;
+      box-sizing: border-box;
+      z-index: -1;
+    }
+    .hand.left {
+      left: 190px;
+      rotate: -35deg;
+    }
+    .hand.right {
+      right: 190px;
+      rotate: 35deg;
+    }
+    .foot {
+      position: absolute;
+      width: 180px;
+      height: 120px;
+      top: 200px;
+      background: #ff007f;
+      border: 5px solid #800000;
+      border-radius: 50%;
+      box-sizing: border-box;
+      z-index: -1;
+    }
+    .foot.left {
+      left: 140px;
+      rotate: 80deg;
+    }
+    .foot.right {
+      right: 140px;
+      rotate: -80deg;
+    }
+  </style>
+  <body>
+    <div class="kirby">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="cheek left"></div>
+      <div class="cheek right"></div>
+      <div class="mouth"></div>
+      <div class="hand left"></div>
+      <div class="hand right"></div>
+      <div class="foot left"></div>
+      <div class="foot right"></div>
+    </div>
+  </body>
+</html>
